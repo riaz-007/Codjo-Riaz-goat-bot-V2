@@ -18,7 +18,7 @@ async function getAIResponse(input, userId, messageID) {
     { url: 'https://ai-chat-gpt-4-lite.onrender.com/api/hercai', params: { question: input } }
   ];
 
-  let response = "Salut , je suis l'intelligence artificielle créer 𝐩𝐚𝐫🍏𝐑𝐈𝐀𝐙🍎𝐄𝐒𝐓 𝐀𝐑𝐒𝐄𝐍𝐄 💧💧 je suis là pour répondre à tes questions...(⁠◠⁠‿⁠◕⁠)";
+  let response = "Salut , je suis Mia une Intelligence artificielle développée par Riaz pour Islamia😎💧💧 je suis là pour répondre à tes questions...(⁠◠⁠‿⁠◕⁠)";
   let currentIndex = 0;
 
   for (let i = 0; i < services.length; i++) {
@@ -50,8 +50,8 @@ module.exports = {
     }
 
     const { response, messageID } = await getAIResponse(input, event.senderID, event.messageID);
-    api.sendMessage(` \n══════🍏𝐑𝐈𝐀𝐙🍎══════\n🥏 ${response} 🪶\n
-══════🍏𝐀𝐑𝐒𝐄𝐍𝐄🍎══════`, event.threadID, messageID);
+    api.sendMessage(` \n══════🍏Mia by Riaz 😎🍎══════\n🥏 ${response} 🪶\n
+══════🍏Islamia🍎══════`, event.threadID, messageID);
   },
   onChat: async function ({ event, message }) {
     const messageContent = event.body.trim().toLowerCase();
@@ -60,9 +60,9 @@ module.exports = {
       const { response, messageID } = await getAIResponse(input, event.senderID, message.messageID);
       message.reply(`
 
-\n══════🍏𝐑𝐈𝐀𝐙🍎══════
+\n══════🍏Mia by Riaz🍎══════
 \n🥏 ${response} 🪶\n
-══════🍏𝐀𝐑𝐒𝐍𝐄🍎══════`, messageID);
+══════🍏Islamia🍎══════`, messageID);
     }
   }
 };
